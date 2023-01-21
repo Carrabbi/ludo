@@ -1,15 +1,20 @@
 .header {
-  padding: 12px 10px;
-  background: rgba(239, 244, 84, 0.534);
+  padding: 0px;
+  background: #FFFFFF;
+  height: auto;
 
 }
 
 .header a {
+  align-items: center;
   display: inline-block;
   text-decoration: none; 
   color: black;
+  height: auto;
 
 }
+
+
 
 .headerContainer {
   display: flex;
@@ -18,9 +23,18 @@
   height: auto;
 }
 
+
+.leftHeaderContainer {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+}
+
+
 .logo {
   height: 60px;
-  pointer-events: none;
 }
 
 
@@ -44,12 +58,13 @@
 
 
 .title {
-  width: 40%;
   font-size: 2em;
-  margin-left: 10px;
-  float: left;
+  padding: 5px 5px;
 }
+
 
 .navigation ul {
   list-style: none;
+  justify-content: space-between;
+  margin-right: 8px;
 }
