@@ -1,0 +1,40 @@
+{
+
+  "rooms": [
+
+    {
+      "name": "Room 1",
+
+      "password": "Information Technology",
+
+      "host": "Ian"
+
+
+
+
+    },
+
+    {
+
+      "name": "Room 2",
+
+      "password": "Computer Engineering",
+
+      "host": "Patrick"
+
+
+    },
+
+    {
+      "name": "Room 3",
+
+      "password": "Information Technology",
+
+      "host": "Conrad"
+
+
+    }
+
+  ]
+
+}

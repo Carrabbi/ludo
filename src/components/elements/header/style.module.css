@@ -1,0 +1,55 @@
+.header {
+  padding: 12px 10px;
+  background: rgba(239, 244, 84, 0.534);
+
+}
+
+.header a {
+  display: inline-block;
+  text-decoration: none; 
+  color: black;
+
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+}
+
+.logo {
+  height: 60px;
+  pointer-events: none;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 10s linear;
+  }
+
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.title {
+  width: 40%;
+  font-size: 2em;
+  margin-left: 10px;
+  float: left;
+}
+
+.navigation ul {
+  list-style: none;
+}

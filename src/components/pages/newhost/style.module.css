@@ -1,0 +1,25 @@
+.newhost{
+  padding: 15px;
+  width: 100%;
+  min-width: 500px;
+  flex-direction: row;
+  margin: 50px;
+}
+
+
+.form1{
+  padding: 15px;
+  width: 30%;
+  min-width: 300px;
+  display: inline-block;
+  margin-left: 15px;
+
+}
+
+.form2{
+  padding: 15px;
+  width: 50%;
+  display: inline-block;
+  margin-left: 15px;
+
+}
