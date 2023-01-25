@@ -1,15 +1,14 @@
 .newhost{
-  padding: 15px;
-  width: 100%;
-  min-width: 500px;
+  padding: 30px;
+  margin:20px;
   flex-direction: row;
-  margin: 50px;
+  margin: 100px;
+  justify-content: space-between;
 }
 
 
 .form1{
   padding: 15px;
-  width: 30%;
   min-width: 300px;
   display: inline-block;
   margin-left: 15px;
@@ -18,8 +17,9 @@
 
 .form2{
   padding: 15px;
-  width: 50%;
+  min-width: 400px;
   display: inline-block;
   margin-left: 15px;
+
 
 }

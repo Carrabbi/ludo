@@ -4,25 +4,42 @@ import Main from '../../layouts/main/Main';
 import styles from './style.module.css';
 
 import ludo from '../../images/ludo.png';
+import ludoMini from '../../images/mini_ludo.png';
 
 function Home() {
   return (
     <Main>
-      <img src={ludo} className={styles.ludo} alt="Ludo" />
+      <p>
+        <img src={ludo} className={styles.ludo} alt="Ludo" />
+      </p>
       <div className={`container ${styles.containerRed}`}>
-        <h2> Origin</h2>
-        <p>
-          latin word ludo mean play in english. It is a strategy board game for
-          two to four players, in which the players race their four tokens from
-          start to finish according to the rolls of a single die. Like other
-          cross and circle games, Ludo is derived from the Indian game Pachisi.
-          The game and its variations are popular in many countries and under
-          various names.
-        </p>
-        <a href="https://en.wikipedia.org/wiki/Ludo">
-          <p className={styles.note}>source Wikipedia</p>
-        </a>
+        <div className={styles.child1}>
+          <h2> Origin</h2>
+          <p>
+            latin word ludo mean play in english. It is a strategy board game
+            for two to four players, in which the players race their four tokens
+            from start to finish according to the rolls of a single die. Like
+            other cross and circle games, Ludo is derived from the Indian game
+            Pachisi. The game and its variations are popular in many countries
+            and under various names.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Ludo">
+            <p className={styles.note}>source Wikipedia</p>
+          </a>
+        </div>
+
+        <div className={styles.child2}>
+          <p>
+            {' '}
+            <img
+              src={ludoMini}
+              className={styles.imageRounded}
+              alt="Ludo"
+            />{' '}
+          </p>
+        </div>
       </div>
+
       <div className={`container ${styles.containerYellow}`}>
         <h2> Rules</h2>
         <h3>Overview</h3>

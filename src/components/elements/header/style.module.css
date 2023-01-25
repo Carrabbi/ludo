@@ -1,40 +1,74 @@
-.header {
-  padding: 0px;
-  background: #FFFFFF;
-  height: auto;
-
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.header a {
+
+.body{
+  background: whitesmoke;
+}
+
+
+ul{
+  list-style: none;
   align-items: center;
-  display: inline-block;
-  text-decoration: none; 
-  color: black;
-  height: auto;
+  justify-content: center;
 
 }
 
+.header {
+  background: whitesmoke;
+  position:sticky;
+  display: inline-block;
+  width: 100%;
+  top: 0;
+  align-items: center;
+
+}
 
 
 .headerContainer {
+  width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  height: auto;
-}
+  min-height: 80px;
+  flex-direction: row;
+  overflow: hidden;
+  height: inherit;
 
+}
 
 .leftHeaderContainer {
-  margin-left: 8px;
+  padding: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: auto;
+  justify-content: center;
+  min-height: 70px;
+}
+
+.rightHeaderContainer {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
 }
 
 
+
+.header a,
+.header a:visited {
+  display: flex;
+  flex-direction: row;
+  color: whitesmoke;
+  align-items: center;
+  text-decoration: none;
+
+}
+
 .logo {
-  height: 60px;
+  position: flex;
 }
 
 
@@ -55,16 +89,171 @@
   }
 }
 
-
-
 .title {
   font-size: 2em;
   padding: 5px 5px;
+  display: flex;
+  color: black;
+  
+}
+
+/* Hiding */
+.checkbox {
+  display: none;
+} 
+
+
+
+.navigationMenuMobile {
+  display: none;
 }
 
 
-.navigation ul {
-  list-style: none;
-  justify-content: space-between;
-  margin-right: 8px;
+.navigationMenuDesktop{
+  display: none;
+}
+
+/* for desktops*/
+@media (min-width: 768px) {
+
+
+  .navigationMenuDesktop{
+    gap: 10px;
+    max-height: 80px;
+    display: flex;
+  }
+
+  .header ul{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+  }
+
+  .header li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+}
+
+/* hamburger for smartphones */
+  @media (max-width: 768px) {
+    
+
+    .navigationMenuMobile {
+      position: absolute;
+      z-index: 300;
+      top: 80px;
+      left: 0%;
+      width: 100%;
+      height: 100vh;
+      display: none;
+      opacity: 1;
+      background: whitesmoke;
+      border: 50%;
+
+    }
+
+    .header ul{
+      display: flex;
+      width: 100%;
+  
+    }
+  
+    .header li{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .header a{
+      margin-bottom: 1em;
+      display: flex;
+      flex: row;
+      text-decoration: none;
+    }
+
+
+
+    .hamburgerMenu {
+      position: absolute;
+      right: -100px;
+      top: -100px;
+      z-index: 100;
+      width: 200px;
+      height: 180px;
+      background: whitesmoke;
+      border-radius: 50% 50% 50% 50%;
+      -webkit-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      cursor: pointer;
+      
+    }
+
+
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 135px;
+      left: 50px;
+      width: 30px;
+      height: 2px;
+      background: #4A87FF;
+      display: block;
+      content: "";
+    }
+
+    .hamburger:before,
+    .hamburger:after
+    {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #4A87FF;
+      content: "";
+    }  
+    
+    .hamburger:before { top: -10px; }
+    
+    .hamburger:after { bottom: -10px; }
+    
+    .checkbox { display: none; }
+    
+/*
+    input:checked + .hamburgerMenu  {
+      border-radius: 0;    
+    }   
+*/
+    
+    input:checked + .hamburgerMenu .hamburger {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #4A87FF;
+      
+    }
+    
+    input:checked + .hamburgerMenu .hamburger:after {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      bottom: 0;
+      background: #4A87FF;
+      
+    }
+    
+    input:checked + .hamburgerMenu .hamburger:before {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      background: transparent;
+      top: 0;
+    }
+
+        
+
 }

@@ -3,10 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../elements/button/Button';
 import Main from '../../layouts/main/Main';
 
-
 function Room() {
-
-  
   const navigate = useNavigate();
   // const [name, setName] = useState('');
   // const [password, setPassword] = useState('');

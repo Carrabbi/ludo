@@ -53,7 +53,7 @@ function NewHost() {
     <Main>
       <div className={styles.newhost}>
         <div className={styles.form1}>
-          <h1> Create room</h1>
+          <h1>Create room</h1>
           <form className="form" onSubmit={handleSubmit}>
             <InputGroup
               id="roomName"
@@ -83,6 +83,30 @@ function NewHost() {
           </form>
         </div>
         <div className={styles.form2}>
+          <h1>Join room</h1>
+          <form className="form" onSubmit={handleSubmit}>
+            <InputGroup
+              id="roomName"
+              type="text"
+              label="Room name"
+              handleChange={handleRoomNameChange}
+              inputValue={roomName}
+            />
+            <InputGroup
+              id="password"
+              type="password"
+              label="Password"
+              handleChange={handlePasswordChange}
+              inputValue={password}
+            />
+            <InputGroup
+              id="host"
+              type="text"
+              label="Host name"
+              handleChange={handleHostChange}
+              inputValue={host}
+            />
+          </form>
           <form className="form" onSubmit={handleSubmit2}>
             <Button btnType="submit">Join Room</Button>
             {apiError && <p>{apiError}</p>}
