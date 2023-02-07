@@ -1,9 +1,46 @@
-.button {
-  padding: 10px 12px;
-  margin: 4px;
-  font-weight: bold;
-  background: #9DD241;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
+
+.btn{  
+    padding: 10px 12px;
+    margin: 7px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 3px lightgray;
+    min-width: 50px;
+    min-height: 20px;
+  }
+
+
+.yellowBtn{
+  composes: yellowSet from '../../../colors.module.css';
 }
+
+
+.redBtn{
+  composes: redSet from '../../../colors.module.css';
+}
+
+
+.blueBtn{
+  composes: blueSet from '../../../colors.module.css';
+}
+
+.greenBtn{
+  composes: greenSet from '../../../colors.module.css';
+}
+
+.blackBtn{
+  composes: blackSet from '../../../colors.module.css';
+}
+
+
+.yellowBtn:hover,
+.redBtn:hover,
+.blueBtn:hover,
+.greenBtn:hover,
+.blackBtn:hover{
+  opacity: 0.5;
+
+}
+

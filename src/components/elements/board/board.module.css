@@ -1,0 +1,140 @@
+
+.matrix{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 3px;
+}  
+
+.leftup,
+.rightup,
+.leftdown,
+.rightdown{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftup{
+  top: 0px;
+  left: 0px;
+}
+
+.rightup{
+  top: 0px;
+  right: 0px;
+}
+
+.leftdown{
+  bottom: 0px;
+  left: 0px;
+}
+
+.rightdown{
+  bottom: 0px;
+  right: 0px;
+}
+
+.centeredDiv {
+  width:110px;
+  height: 110px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.start{
+  composes: yellowSet from '../../../colors.module.css';
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 0px 0px lightgray;
+  z-index: -1;
+  animation: start-pulse 1s infinite;
+}
+
+@keyframes start-pulse {
+  0%{
+    background: whitesmoke;
+    color: whitesmoke;
+  }
+}
+
+.msg{
+  composes: whiteSet from '../../../colors.module.css';
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -0;
+  background: transparent;
+  animation: none;
+}
+
+.dice{
+  composes: whiteSet from '../../../colors.module.css';
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border: 2px;
+  border-radius: 15px;
+  z-index: -1;
+  border: 2px;
+  border-color: black;
+  background: transparent;
+  animation: none;
+  visibility: hidden;
+}
+
+
+@media (max-width: 650px) {
+
+  .matrix{
+    max-width: 100vw;
+    max-height: 100vw;
+
+  }
+  .centeredDiv {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+
+@media (max-width: 400px) {
+
+  .centeredDiv {
+    width: 60px;
+    height: 60px;
+  }
+
+}

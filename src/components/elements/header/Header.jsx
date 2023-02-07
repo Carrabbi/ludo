@@ -5,34 +5,26 @@ import styles from './style.module.css';
 import dice from '../../images/logo.png';
 import Button from '../button/Button';
 
+import  {HamburgerListener} from '../../useeffects/HamburgerListener';
+
 function Header() {
   const hamName = 'hamburgerMenu';
   const navName = 'navigationMenuMobile';
 
+  
   return (
-    <header className={styles.header}>
-      <div className={`container ${styles.headerContainer}`}>
-        <div className={styles.leftHeaderContainer}>
+    <>
+      <header className={styles.header}>
+        <div className={`container ${styles.headerContainer}`}>
           <Link to="/">
             <img className={styles.logo} src={dice} alt="logo" />
             <h1 className={styles.title}>Ludo</h1>
           </Link>
-        </div>
-        <div className={styles.rightHeaderContainer}>
-          <div id={hamName}>
-            {' '}
-            <label htmlFor="checkboxHam">
-              <input
-                className={styles.checkbox}
-                type="checkbox"
-                id="checkboxHam"
-              />
 
-              <span className={styles.hamburgerMenu}>
-                <span className={styles.hamburger} />
-              </span>
-            </label>
-          </div>
+            <div className={styles.hamburger} id={hamName} >
+              <div />
+            </div>
+
 
           <nav className={styles.navigationMenuDesktop}>
             <ul>
@@ -40,10 +32,7 @@ function Header() {
                 <Link to="/">
                   <Button>Home</Button>
                 </Link>
-                <Link to="/">
-                  <Button>Join Game</Button>
-                </Link>
-                <Link to="/newhost">
+                <Link to="/playludo">
                   <Button>Play Ludo</Button>
                 </Link>
               </li>
@@ -56,18 +45,18 @@ function Header() {
                 <Link to="/">
                   <Button>Home</Button>
                 </Link>
-                <Link to="/">
-                  <Button>Join Game</Button>
-                </Link>
-                <Link to="/newhost">
+                <Link to="/playludo">
                   <Button>Play Ludo</Button>
                 </Link>
               </li>
             </ul>
           </nav>
         </div>
-      </div>
-    </header>
+        {/* headerContainer */}
+      </header>
+      <HamburgerListener />
+    </>
+
   );
 }
 

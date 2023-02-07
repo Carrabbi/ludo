@@ -7,21 +7,29 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "browserify-fs": "^1.0.0",
-    "buffer": "^6.0.3",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "axios": "^1.3.0",
+    "cors": "^2.8.5",
+    "css-module": "^1.1.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "math": "^0.0.3",
     "mysql": "^2.18.1",
-    "prettier": "^2.8.3",
+    "mysql2": "^3.1.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-css-modules": "^4.7.11",
     "react-dom": "^18.2.0",
+    "react-hooks": "^1.0.1",
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
+    "react-table": "^7.8.0",
+    "sequelize": "^6.28.0",
+    "style-loader": "^3.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "server": "npx nodemon ./server/server.js",
+    "seeder:up": "npx sequelize-cli seeder:up",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -30,7 +38,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -49,10 +58,13 @@
     "browser-resolve": "^2.0.0",
     "eslint": "^8.32.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.1",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.3"
   }
 }

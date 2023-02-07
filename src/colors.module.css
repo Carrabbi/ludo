@@ -1,0 +1,64 @@
+html {
+  --red-color: #FF3737;
+  --blue-color:  #4A87FF;
+  --yellow-color: #FFF200;
+  --green-color: #7FBC16;
+}
+
+
+.yellowSet{
+  background: var(--yellow-color);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.redSet{
+  background: var(--red-color);
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.blueSet{
+  background: var(--blue-color);
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.greenSet{
+  background:var(--green-color);
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.blackSet{
+  background: black;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.whiteSet{
+  background: whitesmoke;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+

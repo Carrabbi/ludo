@@ -1,0 +1,23 @@
+.room {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 8vh;
+  min-height: 86vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.boardDiv{
+  width: 90vh;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 650px) {
+  .boardDiv{
+    width: 90vw;
+    min-height: 90vw;
+  }
+}

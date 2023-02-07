@@ -3,12 +3,6 @@
   padding: 0;
 }
 
-
-.body{
-  background: whitesmoke;
-}
-
-
 ul{
   list-style: none;
   align-items: center;
@@ -17,42 +11,26 @@ ul{
 }
 
 .header {
+  width: 100%;
+  height: 8vh;
+  top: 0;
+  gap: 5px;
   background: whitesmoke;
   position:sticky;
   display: inline-block;
-  width: 100%;
-  top: 0;
   align-items: center;
-
 }
 
 
 .headerContainer {
   width: 100%;
+  height:100%;
+  gap: 5px;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  min-height: 80px;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   overflow: hidden;
-  height: inherit;
-
-}
-
-.leftHeaderContainer {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 70px;
-}
-
-.rightHeaderContainer {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 70px;
 }
 
 
@@ -64,13 +42,16 @@ ul{
   color: whitesmoke;
   align-items: center;
   text-decoration: none;
+  align-items: center;
+  justify-content: center;
 
 }
 
 .logo {
-  position: flex;
+  margin: 5px;
+  height: 40px;
+  width: 40px;
 }
-
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -92,17 +73,18 @@ ul{
 .title {
   font-size: 2em;
   padding: 5px 5px;
-  display: flex;
+  position: absolute;
+  top: 2px;
+  left: 60px;
   color: black;
-  
 }
+  
+
 
 /* Hiding */
-.checkbox {
+.title {
   display: none;
-} 
-
-
+}
 
 .navigationMenuMobile {
   display: none;
@@ -113,17 +95,31 @@ ul{
   display: none;
 }
 
+.hamburger {
+  display: none;
+}
+
 /* for desktops*/
 @media (min-width: 768px) {
-
-
-  .navigationMenuDesktop{
-    gap: 10px;
-    max-height: 80px;
+  .header{ 
+    height: 8vh;
+  }
+  .title {
     display: flex;
   }
 
+  .navigationMenuDesktop{
+    display: flex;
+    gap: 10px;
+    height: 45px;
+    right: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   .header ul{
+    padding: 5px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -140,24 +136,9 @@ ul{
 
 }
 
-/* hamburger for smartphones */
+/* for smartphones with hamburger  */
   @media (max-width: 768px) {
     
-
-    .navigationMenuMobile {
-      position: absolute;
-      z-index: 300;
-      top: 80px;
-      left: 0%;
-      width: 100%;
-      height: 100vh;
-      display: none;
-      opacity: 1;
-      background: whitesmoke;
-      border: 50%;
-
-    }
-
     .header ul{
       display: flex;
       width: 100%;
@@ -173,87 +154,72 @@ ul{
 
 
     .header a{
-      margin-bottom: 1em;
       display: flex;
       flex: row;
       text-decoration: none;
+
+    }
+
+    .label{
+      overflow: hidden;
     }
 
 
+    .navigationMenuMobile {
 
-    .hamburgerMenu {
       position: absolute;
-      right: -100px;
-      top: -100px;
-      z-index: 100;
-      width: 200px;
-      height: 180px;
+      z-index: 1000;
+      top: 8vh;
+      left: 0%;
+      width: 100vw;
+      height: 87vh;
+      display: none;
       background: whitesmoke;
-      border-radius: 50% 50% 50% 50%;
-      -webkit-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+
+    .hamburger{
+      height: 45px;
+      width: 45px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
-      
-    }
+  }
+  
+  
 
-
-    .hamburger {
-      display: block;
-      position: absolute;
-      top: 135px;
-      left: 50px;
-      width: 30px;
-      height: 2px;
-      background: #4A87FF;
-      display: block;
-      content: "";
-    }
-
-    .hamburger:before,
-    .hamburger:after
-    {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: #4A87FF;
-      content: "";
-    }  
+    /* CREATING THE MIDDLE LINE OF THE HAMBURGER : */
     
-    .hamburger:before { top: -10px; }
-    
-    .hamburger:after { bottom: -10px; }
-    
-    .checkbox { display: none; }
-    
-/*
-    input:checked + .hamburgerMenu  {
-      border-radius: 0;    
-    }   
-*/
-    
-    input:checked + .hamburgerMenu .hamburger {
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-      background: #4A87FF;
-      
-    }
-    
-    input:checked + .hamburgerMenu .hamburger:after {
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-      bottom: 0;
-      background: #4A87FF;
-      
-    }
-    
-    input:checked + .hamburgerMenu .hamburger:before {
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-      background: transparent;
+  .hamburger > div{
+      position: relative;
       top: 0;
-    }
+      left: 0;
+      background: #4A87FF;
+      height: 2px;
+      width: 60%;
+      transition: all  0.4s ease;
+  }
 
+
+  .hamburger > div::before,
+  .hamburger > div::after{
+      content: '';
+      position: absolute;
+      top: -10px;
+      background: #4A87FF;
+      width: 100%;
+      height: 2px;
+      transition: all  0.4s ease;
+  }
+
+  .hamburger > div::after{
+      top: 10px;
+  }
         
 
 }

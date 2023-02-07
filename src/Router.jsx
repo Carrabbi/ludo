@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './components/pages/home/Home';
-import NewHost from './components/pages/newhost/NewHost';
+import PlayLudo from './components/pages/playludo/PlayLudo';
 import Room from './components/pages/room/Room';
 
 function Router() {
@@ -10,7 +10,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/newhost" element={<NewHost />} />
+        <Route path="/playludo" element={<PlayLudo />} />
         <Route path="/newroom" element={<Room />} />
       </Routes>
     </BrowserRouter>

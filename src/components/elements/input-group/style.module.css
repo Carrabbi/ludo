@@ -1,18 +1,53 @@
 .inputContainer {
-  margin: 10px 0;
-  max-width: 200px;
+  margin: 10px;
+  max-width: 300px;
+  align-items: center;
+  justify-content: center;
 }
 
+
 .label {
+  display: flex;
+  flex-direction: column;
   font-weight: bold;
   font-size: 12px;
+  max-width: 100%;
+
+}
+
+.inputClass {
+  width: 100%;
 }
 
 .input {
-  display: block;
+  display: flex;
   padding: 4px;
   font-size: 18px;
   border-radius: 4px;
   margin-top: 5px;
   border: 1px solid rgba(0, 0, 0, 0.5);
+  max-width: 200px;
+  
 }
+
+
+@media (max-width: 768px){
+
+  .inputContainer {
+   max-width: 100%;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   }
+   
+   .label{
+    margin:none;
+    text-align: center;
+   }
+
+  .input {
+  margin: auto;
+  z-index: 100;
+  }
+
+ }

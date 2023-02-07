@@ -9,12 +9,13 @@ import ludoMini from '../../images/mini_ludo.png';
 function Home() {
   return (
     <Main>
-      <p>
-        <img src={ludo} className={styles.ludo} alt="Ludo" />
-      </p>
+      <img src={ludo} className={styles.ludo} alt="Ludo" />
       <div className={`container ${styles.containerRed}`}>
         <div className={styles.child1}>
           <h2> Origin</h2>
+          <br />
+          <hr />
+          <br />
           <p>
             latin word ludo mean play in english. It is a strategy board game
             for two to four players, in which the players race their four tokens
@@ -22,11 +23,15 @@ function Home() {
             other cross and circle games, Ludo is derived from the Indian game
             Pachisi. The game and its variations are popular in many countries
             and under various names.
-          </p>
+          </p>{' '}
+          <br />
           <a href="https://en.wikipedia.org/wiki/Ludo">
             <p className={styles.note}>source Wikipedia</p>
           </a>
         </div>
+
+        <br />
+        <br />
 
         <div className={styles.child2}>
           <p>
@@ -40,10 +45,14 @@ function Home() {
         </div>
       </div>
 
-      <div className={`container ${styles.containerYellow}`}>
+      <div className={`container ${styles.containerGreen}`}>
         <h2> Rules</h2>
+        <br />
+        <hr />
+        <br />
         <h3>Overview</h3>
         <p>
+          <br />
           Two, three, or four can play, without partnerships. At the beginning
           of the game, each four tokens of player are out of play and staged in
           the yard of player (one of the large corner areas of the board in the
@@ -58,9 +67,13 @@ function Home() {
           the finish wins the game. The others often continue to play to
           determine second-, third-, and fourth-place finishers.
         </p>
+        <br />
+        <hr />
+        <br />
 
         <h3>Gameplay</h3>
         <p>
+          <br />
           Each player rolls a die; the highest roller begins the game. Players
           alternate turns in a clockwise direction. To enter a token into play
           from its yard to its starting square, a player must roll a six.
@@ -99,6 +112,7 @@ function Home() {
           house rules you can wait for the others to finish and get 2nd, 3rd or
           4th.
         </p>
+        <br />
         <a href="https://en.wikipedia.org/wiki/Ludo">
           <p className={styles.note}>source Wikipedia</p>
         </a>
@@ -106,8 +120,12 @@ function Home() {
 
       <div className={`container ${styles.containerBlue}`}>
         <h2> History</h2>
+        <br />
+        <hr />
+        <br />
         <h3>The Mahabharata</h3>
         <p>
+          <br />
           Pachisi was created in India in the sixth century CE. The earliest
           evidence of this evolution of game in India is the depiction of boards
           on the caves of Ellora. The original version is also described in the
@@ -124,9 +142,13 @@ function Home() {
           patented as Ludo in England in 1896. The Royal Navy took Ludo and
           converted it into the board game Uckers.
         </p>
+        <br />
 
+        <hr />
+        <br />
         <h3>Ludo board</h3>
         <p>
+          <br />
           Special areas of the Ludo board are typically coloured bright yellow,
           green, red, and blue. Each player is assigned a colour and has four
           tokens in their colour. The board is normally square with a
@@ -138,6 +160,7 @@ function Home() {
           composed of coloured triangles atop the home columns of player (thus
           depicting arrows pointing to the finish).
         </p>
+        <br />
         <a href="https://en.wikipedia.org/wiki/Ludo">
           <p className={styles.note}>source Wikipedia</p>
         </a>

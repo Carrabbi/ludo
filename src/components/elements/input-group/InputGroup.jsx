@@ -8,13 +8,15 @@ function InputGroup({ id, type, label, handleChange, inputValue }) {
     <div className={styles.inputContainer}>
       <label htmlFor={id} className={styles.label}>
         {label}
-        <input
-          type={type}
-          id={id}
-          onChange={handleChange}
-          value={inputValue}
-          className={styles.input}
-        />
+        <div className={styles.inputClass}>
+          <input
+            type={type}
+            id={id}
+            onChange={handleChange}
+            value={inputValue}
+            className={styles.input}
+          />
+        </div>
       </label>
     </div>
   );
